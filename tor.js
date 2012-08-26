@@ -26,10 +26,18 @@ var tor = (function () {
 			switch(method){
 				case "POST":
 					if (attachment) {
-						params["attachment"] = { file: attachment, content_type: "application/octet-stream" };
-						needle.post(requestUrl, params, { multipart: true }, function(err, resp, body){
-							self.parseResponse(err, resp, body, requestCallBack);
-						});
+						params["attachment"] = {
+							file: attachment,
+							content_type: "application/octet-stream"
+						};
+						needle.post(
+							requestUrl,
+							params,
+							{ multipart: true },
+							function(err, resp, body){
+								self.parseResponse(err, resp, body, requestCallBack);
+							}
+						);
 					} else {
 						needle.post(requestUrl, params, function(err, resp, body){
 							self.parseResponse(err, resp, body, requestCallBack);
@@ -55,7 +63,15 @@ var tor = (function () {
 			ticket = {};
 			attachment = null;
 			if(ticketObj){
-				ticketParams = ["email", "from_name", "subject", "body", "html", "date", "labels"];
+				ticketParams = [
+					"email",
+					"from_name",
+					"subject",
+					"body",
+					"html",
+					"date",
+					"labels"
+				];
 				ticket = _.pick(ticketObj, ticketParams);
 				if (_.has(ticketObj, "attachment")){
 					attachment = ticketObj["attachment"];
