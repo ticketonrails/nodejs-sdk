@@ -3,10 +3,10 @@
   "name": "ticketonrails",
   "description": "Ticket on Rails Api Client",
   "homepage": "http://www.ticketonrails.com/",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TicketOnRails/api-nodejs-sdk"
+    "url": "https://github.com/TicketOnRails/nodejs-sdk"
   },
   "main": "./tor.js",
   "dependencies": {
@@ -20,7 +20,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://raw.github.com/TicketOnRails/api-nodejs-sdk/master/LICENSE"
+      "url": "https://raw.github.com/TicketOnRails/nodejs-sdk/master/LICENSE"
     }
   ]
 }
