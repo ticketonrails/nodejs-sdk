@@ -3,6 +3,10 @@ api-nodejs-sdk
 
 Ticket on Rails Api Node.js Client
 
+### Install
+
+	npm install ticketonrails
+
 ## Authentication
 
 Every call must have a parameter called "token" defined as:
@@ -45,10 +49,10 @@ Parameters:
 	}
 ```
 
-email, subject and body are required. if date is not speficied the current EPOCH time will be used.
+email, subject and body are required. if date is not specified the current EPOCH time will be used.
 html indicates if the message body is plain text or HTML.
 
-* attachment: 1 file can be specified in the request. Your POST  request's Content-Type 
+* attachment: 1 file can be specified in the request. Your POST request Content-Type 
 should be set to multipart/form-data with the attachments parameter.
 
 Response: json response with the associated ticket id.
