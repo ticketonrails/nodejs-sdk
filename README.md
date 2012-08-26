@@ -1,4 +1,4 @@
-api-nodejs-sdk
+nodejs-sdk
 ==============
 
 Ticket on Rails Api Node.js Client
