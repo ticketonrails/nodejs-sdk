@@ -1,7 +1,7 @@
 api-nodejs-sdk
 ==============
 
-Ticket on Rails Api Client
+Ticket on Rails Api Node.js Client
 
 ## Authentication
 

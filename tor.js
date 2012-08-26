@@ -16,7 +16,7 @@ var tor = (function () {
 		this.projectDomain = projectDomain;
 		this.apiToken = module.md5(this.projectDomain + module.md5(this.apiKey));
 		this.apiVersion = "1";
-		this.serverUrl = "http://api.ticketonrails.dev";
+		this.serverUrl = "http://api.ticketonrails.com";
 
 		this.request = function(url, method, params, attachment, callback){
 			var requestCallBack = callback;
