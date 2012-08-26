@@ -1,4 +1,4 @@
 api-nodejs-sdk
 ==============
 
-Node.js SDK for ToR's API
+Ticket on Rails Api Client

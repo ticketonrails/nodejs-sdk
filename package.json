@@ -1,0 +1,13 @@
+{
+  "author": "Ticket on Rails",
+  "name": "torapi",
+  "description": "Ticket on Rails Api Client",
+  "version": "0.0.1",
+  "dependencies": {
+    "underscore": "1.3.3",
+    "needle": "0.3.2"
+  },
+  "engines": {
+    "node": "*"
+  }
+}
