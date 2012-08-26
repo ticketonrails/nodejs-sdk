@@ -25,7 +25,8 @@ Parameters:
 
 * token: see authentication
 * ticket: json string defined ad follow
-	
+
+```
 	{
 		email: 'from@example.com',
 		from_name: 'John Doe',
@@ -36,12 +37,13 @@ Parameters:
 		labels: ['label 1', 'label 2', ...],
 		attachment: 'filename.file'
 		fields: [
-					{
-						code: 12345
-						value: 'value'
-					}, ...
-				]
+				{
+					code: 12345
+					value: 'value'
+				}, ...
+			]
 	}
+```
 
 email, subject and body are required. if date is not speficied the current EPOCH time will be used.
 html indicates if the message body is plain text or HTML.
