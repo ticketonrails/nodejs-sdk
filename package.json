@@ -6,7 +6,7 @@
   "version": "0.0.2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TicketOnRails/nodejs-sdk"
+    "url": "https://github.com/ticketonrails/nodejs-sdk"
   },
   "main": "./tor.js",
   "dependencies": {
@@ -20,7 +20,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://raw.github.com/TicketOnRails/nodejs-sdk/master/LICENSE"
+      "url": "https://raw.github.com/ticketonrails/nodejs-sdk/master/LICENSE"
     }
   ]
 }
