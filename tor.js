@@ -10,6 +10,17 @@ var tor = (function () {
 		return crypto.createHash("md5").update(value).digest("hex");
 	};
 
+	serialize = function(obj, prefix) {
+		var str = [];
+		for(var p in obj) {
+			var k = prefix ? prefix + "[" + p + "]" : p, v = obj[p];
+			str.push(typeof v == "object" ?
+				serialize(v, k) :
+				encodeURIComponent(k) + "=" + encodeURIComponent(v));
+		}
+		return str.join("&");
+	};
+
 	module.TorApi = function(apiKey, projectDomain){
 
 		this.apiKey = apiKey;
@@ -45,7 +56,7 @@ var tor = (function () {
 					}
 					break;
 				case "GET":
-					needle.get(requestUrl, params, function(err, resp, body){
+					needle.get(requestUrl + '?' + serialize(params), {}, function(err, resp, body){
 						self.parseResponse(err, resp, body, requestCallBack);
 					});
 					break;
@@ -79,6 +90,18 @@ var tor = (function () {
 				params["ticket"] = JSON.stringify(ticket);
 			}
 			this.request("/tickets", "POST", params, attachment, callback);
+		};
+
+		this.getTicket = function(id, callback){
+			this.request("/tickets/" + id, "GET", {}, null, callback);
+		};
+
+		this.getTickets = function(page, limit, callback){
+			params = {
+				page: page,
+				limit: limit
+			};
+			this.request("/tickets", "GET", params, null, callback);
 		};
 
 	};
